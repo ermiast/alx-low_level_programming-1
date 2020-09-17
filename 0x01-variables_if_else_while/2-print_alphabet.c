@@ -3,15 +3,22 @@
 #include <stdlib.h>
 /**
  * main - main block
- * Description: Get a random number and check its last digit, compare it with 5
+ * Description:  prints the alphabet in lowercase,
+ * and then in uppercase, followed by a new line.
  * Return: 0
  */
 int main(void)
 {
-	for (char i = 0; i < 26; i++)
+	int starts[2] = {97, 65};
+
+	for (int k = 0; k < 2; k++)
 	{
-		putchar(i + 97);
+		for (char i = 0; i < 26; i++)
+		{
+			putchar(i + starts[k]);
+		}
 	}
+
 	putchar('\n');
 	return (0);
 }
