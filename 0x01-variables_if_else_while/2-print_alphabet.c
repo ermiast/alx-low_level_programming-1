@@ -12,6 +12,6 @@ int main(void)
 	{
 		putc(i+97, stdout);
 	}
-	
+	putc('\n', stdout);
 	return (0);
 }
