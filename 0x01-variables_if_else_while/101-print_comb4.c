@@ -24,7 +24,7 @@ int main(void)
 
 	while (e < 10)
 	{
-        d = 0;
+		d = 0;
 		while (d < 10)
 		{
 			c = 0;
@@ -36,7 +36,7 @@ int main(void)
 					putchar('0' + d);
 					putchar('0' + c);
 
-					if (c + d + e!= 24)
+					if (c + d + e != 9 + 8 + 7)
 					{
 						putchar(',');
 						putchar(' ');
