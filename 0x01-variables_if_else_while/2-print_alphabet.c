@@ -10,8 +10,8 @@ int main(void)
 {
 	for (char i = 0; i < 26; i++)
 	{
-		putc(i+97, stdout);
+		putchar(i+97);
 	}
-	putc('\n', stdout);
+	putchar('\n');
 	return (0);
 }
