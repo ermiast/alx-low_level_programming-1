@@ -24,18 +24,19 @@ int main(void)
 
 	while (e < 10)
 	{
+        d = 0;
 		while (d < 10)
 		{
 			c = 0;
 			while (c < 10)
 			{
-				if (d != c && d < c && e < d)
+				if (c != d && d != e && e < d && d < c)
 				{
 					putchar('0' + e);
 					putchar('0' + d);
 					putchar('0' + c);
 
-					if (c + d != 17)
+					if (c + d + e!= 24)
 					{
 						putchar(',');
 						putchar(' ');
