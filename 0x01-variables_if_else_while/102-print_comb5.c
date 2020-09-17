@@ -31,7 +31,7 @@ int main(void)
 						putchar(' ');
 						putchar('0' + d);
 						putchar('0' + c);
-						if (c + d != 18 && e + f != 17)
+						if (!(f + e == 18 && c + d == 17))
 						{
 							putchar(',');
 							putchar(' ');
