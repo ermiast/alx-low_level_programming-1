@@ -7,14 +7,20 @@
  */
 int main(void)
 {
-	int starts[2] = {97, 65};
+	char c = 'a';
 
-	for (int k = 0; k < 2; k++)
+	while (c <= 'z')
 	{
-		for (char i = 0; i < 26; i++)
-		{
-			putchar(i + starts[k]);
-		}
+		putchar(c);
+		c++;
+	}
+
+	c = 'A';
+
+	while (c <= 'Z')
+	{
+		putchar(c);
+		c++;
 	}
 
 	putchar('\n');
