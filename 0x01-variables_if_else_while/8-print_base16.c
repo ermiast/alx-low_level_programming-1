@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-	int i = 0;
+	char d = '0';
 
-	while (i < 10)
+	while (d <= '9')
 	{
-		putchar(48 + i);
-		i++;
+		putchar(d);
+		d++;
 	}
 
 	char c = 'a';
