@@ -9,9 +9,17 @@
  */
 int main(void)
 {
+	int i = 0;
+
+	while (i < 10)
+	{
+		putchar(48 + i);
+		i++;
+	}
+
 	char c = 'a';
 
-	while (c <= 'z')
+	while (c <= 'f')
 	{
 		putchar(c);
 		c++;
