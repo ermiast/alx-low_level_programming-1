@@ -10,7 +10,7 @@ int main(void)
 {
 	for (char i = 0; i < 26; i++)
 	{
-		putchar(i+97);
+		putchar(i + 97);
 	}
 	putchar('\n');
 	return (0);
