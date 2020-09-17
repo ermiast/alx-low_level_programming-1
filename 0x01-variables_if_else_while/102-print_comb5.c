@@ -31,7 +31,7 @@ while (f < 10)
 					putchar(' ');
 					putchar('0' + d);
 					putchar('0' + c);
-					if (!(f == 9 && c + d == 17))
+					if (!(f == 9 && c + d == 17 && c == 9))
 					{
 						putchar(',');
 						putchar(' ');
