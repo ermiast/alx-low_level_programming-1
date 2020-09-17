@@ -36,9 +36,6 @@ while (f < 10)
 						putchar(',');
 						putchar(' ');
 					}
-					else{
-						putchar('\n');
-					}
 				}
 				c++;
 			}
