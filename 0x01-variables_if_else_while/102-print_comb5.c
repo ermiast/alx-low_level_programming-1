@@ -31,10 +31,13 @@ while (f < 10)
 					putchar(' ');
 					putchar('0' + d);
 					putchar('0' + c);
-					if (!(f == 9 && c + d == 17 && c == 9))
+					if (!(f + e == 18 && c + d == 17 && d == 9))
 					{
 						putchar(',');
 						putchar(' ');
+					}
+					else{
+						putchar('\n');
 					}
 				}
 				c++;
