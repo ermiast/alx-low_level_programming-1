@@ -8,7 +8,7 @@
 int main(void)
 {
 
-	char c[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+	char c[10] = "Holberton";
 
 	for (int i = 0; c[i] != '\0'; i++)
 	{
