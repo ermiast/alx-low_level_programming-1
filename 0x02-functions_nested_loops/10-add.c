@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
  * add - returns the sum of its parameters
  * @a: int type number
@@ -10,6 +9,5 @@
 
 int add(int a, int b)
 {
-
-    return (a + b);
+return (a + b);
 }
