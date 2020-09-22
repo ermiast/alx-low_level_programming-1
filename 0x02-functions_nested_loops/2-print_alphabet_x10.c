@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
  * print_alphabet - Entry point
@@ -9,20 +9,15 @@ void print_alphabet_x10(void);
 {
 	char c = 'a';
 
-	while (c <= 'z')
+	for (int i = 0; i < 10; i++)
 	{
-		putchar(c);
-		c++;
+		while (c <= 'z')
+		{
+			_putchar(c);
+			c++;
+		}
 	}
-
-	c = 'A';
-
-	while (c <= 'Z')
-	{
-		putchar(c);
-		c++;
-	}
-
+	
 	return (void);
 
 }
