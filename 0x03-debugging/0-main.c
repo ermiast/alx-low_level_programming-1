@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 
 /**
@@ -8,6 +7,10 @@
 
 int main(void)
 {
+int i;
 
-return positive_or_negative(0) == 0 ? 0 : 1;
+i = 0;
+positive_or_negative(i);
+
+return (0);
 }
