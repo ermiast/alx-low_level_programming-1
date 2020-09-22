@@ -17,7 +17,11 @@ while (a <= 9)
 	while (b <= 9)
 	{
 		rep = a * b;
-		if (rep < 10)
+		if (rep == 0)
+		{
+			_putchar('0' + rep);
+		}
+		else if (rep > 0 && rep < 10)
 		{
 			_putchar(' ');
 			_putchar('0' + rep);
