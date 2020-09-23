@@ -8,14 +8,15 @@
  */
 int main(void)
 {
-	int a = 0, b = 1, next;
+	unsigned long a = 0, b = 1;
+	unsigned long next;
 
 	for (int i = 0; i < 50; i++)
 	{
 		next = a + b;
 		a = b;
 		b = next;
-		printf("%d", next);
+		printf("%lu", next);
 
 		if (i != 49)
 		{
