@@ -11,7 +11,7 @@ int main(void)
 	int i = 0;
 	long int a = 0, b = 1, next;
 
-	while( i < 98)
+	while (i < 98)
 	{
 		next = a + b;
 		a = b;
