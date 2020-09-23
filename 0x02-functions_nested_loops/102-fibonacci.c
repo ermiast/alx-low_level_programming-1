@@ -9,8 +9,7 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long a = 0, b = 1;
-	unsigned long next;
+	unsigned long a = 0, b = 1, next;
 
 	while( i < 50)
 	{
@@ -25,5 +24,6 @@ int main(void)
 		}
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
