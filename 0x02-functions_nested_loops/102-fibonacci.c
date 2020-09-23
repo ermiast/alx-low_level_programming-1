@@ -8,9 +8,7 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, next;
-
-	printf("%i, %i, ", a, b);
+	int a = 0, b = 1, next;
 
 	for (int i = 0; i < 50; i++)
 	{
