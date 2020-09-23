@@ -8,10 +8,11 @@
  */
 int main(void)
 {
+	int i = 0;
 	unsigned long a = 0, b = 1;
 	unsigned long next;
 
-	for (int i = 0; i < 50; i++)
+	while( i < 50)
 	{
 		next = a + b;
 		a = b;
@@ -22,6 +23,7 @@ int main(void)
 		{
 			printf(", ");
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
