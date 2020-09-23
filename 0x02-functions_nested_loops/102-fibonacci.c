@@ -8,18 +8,22 @@
  */
 int main(void)
 {
-	int c = 0;
-	int sum = 0;
+	int a = 1, b = 2, next;
 
-	while (c < 1024)
+	printf("%i, %i, ", a, b);
+
+	for (int i = 0; i < 50; i++)
 	{
-		if (c % 3 == 0 || c % 5 == 0)
-		{
-			sum += c;
-		}
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%d", next);
 
-		c++;
+		if (i != 49)
+		{
+			printf(", ");
+		}
 	}
-	printf("%i\n", sum);
+	putchar('\n');
 	return (0);
 }
