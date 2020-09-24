@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * print_numbers - prints numbers
+ * print_most_numbers - prints most numbers
  * Return:0
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	for (char n = '0'; n <= '9'; n++)
 	{
