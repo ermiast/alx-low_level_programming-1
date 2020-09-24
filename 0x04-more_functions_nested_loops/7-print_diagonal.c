@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - check for a digit
- * @n : number of _ to be printed
+ * @n : number of \\ to be printed
  * Return:void
  */
 
@@ -22,7 +22,7 @@ void print_diagonal(int n)
 		_putchar('\n');
 		i++;
 	}
-	if (!(i < n && n > 0))
+	if (i != 0)
 		_putchar('\n');
 
 }
