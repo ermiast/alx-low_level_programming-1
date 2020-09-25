@@ -10,12 +10,13 @@ int main(void)
 
 unsigned int long n = 612852475143, a = 2;
 
-while (a < n/2)
+while (a < n)
 {
 
 	if (n % a == 0)
 	{
 		n = n / a;
+		a = 1;
 	}
 	a++;
 
