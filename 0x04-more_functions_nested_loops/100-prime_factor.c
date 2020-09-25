@@ -15,8 +15,7 @@ while (1)
 
 	if (n % a == 0)
 	{
-		n = n / a;
-		printf("%lu \n", n);
+		printf("%lu \n", n / a);
 		break;
 	}
 	a--;
