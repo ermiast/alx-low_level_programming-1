@@ -10,7 +10,7 @@ int main(void)
 
 unsigned int long n = 612852475143, a = 2;
 
-while (a < n)
+while (a < n/2)
 {
 
 	if (n % a == 0)
