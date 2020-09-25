@@ -8,21 +8,20 @@
 int main(void)
 {
 
-unsigned int long n = 612852475143, a = 2;
+unsigned int long n = 612852475143, a = (int) sqrt(n);
 
-while (a < (int) sqrt(n))
+while (1)
 {
 
 	if (n % a == 0)
 	{
 		n = n / a;
-		a = 1;
+		printf("%lu \n", n);
+		break;
 	}
-	a++;
+	a--;
 
 }
-
-printf("%lu \n", n);
 
 return (0);
 }
