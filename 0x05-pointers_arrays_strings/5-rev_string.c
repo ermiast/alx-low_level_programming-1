@@ -12,7 +12,7 @@ char s1[i];
 while (i)
 {
 	s1[i] = s[i];
-    i--;
+	i--;
 }
 s = s1;
 }
