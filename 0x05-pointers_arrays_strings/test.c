@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void) {
+  char s[] = "1234567";
+  int len = 0, i = 0;
+
+for (int len = 0; s[len]; len++);
+
+int half = len/2;
+char temp;
+
+while (half--)
+{
+	temp = s[len-i];
+	s[len-i] = s[i];
+	s[i] = temp; 
+	i++;
+
+}
+puts(s);
+  return 0;
+}
