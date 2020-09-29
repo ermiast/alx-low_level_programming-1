@@ -7,7 +7,7 @@
 
 void print_rev(char *s)
 {
-int i = _strlen(s);
+int i = sizeof(s) / sizeof(s[0]) - 1;
 while (i)
 {
 	_putchar(s[i]);
