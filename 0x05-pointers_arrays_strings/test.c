@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
+    int half;
   char s[] = "1234567";
   int len = 0, i = 0;
 
