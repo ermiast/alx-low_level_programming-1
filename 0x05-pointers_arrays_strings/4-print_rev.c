@@ -7,11 +7,12 @@
 
 void print_rev(char *s)
 {
-int i = sizeof(s) / sizeof(s[0]) - 1;
-while (i)
+int i = 0;
+while (s[i])
+	i++;
+while (i--)
 {
 	_putchar(s[i]);
-	i--;
 }
 _putchar('\n');
 
