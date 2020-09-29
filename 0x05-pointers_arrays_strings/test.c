@@ -6,13 +6,14 @@ int main(void) {
 
 for (int len = 0; s[len]; len++);
 
-int half = len/2;
+
+half = len/2;
 char temp;
 
 while (half--)
 {
-	temp = s[len-i];
-	s[len-i] = s[i];
+	temp = s[len-i-1];
+	s[len-i-1] = s[i];
 	s[i] = temp; 
 	i++;
 

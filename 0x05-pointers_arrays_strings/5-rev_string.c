@@ -8,12 +8,12 @@
 void rev_string(char *s)
 {
 
-int len = 0, i = 0;
+int len = 0, i = 0, half;
 
 while (s[len])
 	len++;
 
-int half = len / 2;
+half = len / 2;
 char temp;
 
 while (half--)
