@@ -5,10 +5,15 @@
  * Return: void
 */
 
-void _puts_half(char *str)
+void puts_half(char *str)
 {
-int i = 0;
-while (str[(i + 1) / 2])
+int len = 0;
+while (str[len])
+	len++;
+
+int i = (len + 1) / 2;
+
+while (i != len)
 {
 	_putchar(str[i]);
 	i++;
