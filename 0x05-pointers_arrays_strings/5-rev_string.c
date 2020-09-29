@@ -5,13 +5,21 @@
  * Return: void
 */
 
+int lastChar(char *s)
+{
+	int len = 0;
+	while (s[len] != '\0')
+	len++;
+
+	return (len);
+}
+
 void rev_string(char *s)
 {
 
-int len = 0, i = 0, half;
-
-while (s[len])
-	len++;
+int len, i, half;
+i = 0;
+len = lastChar(s);
 
 half = len / 2;
 char temp;
