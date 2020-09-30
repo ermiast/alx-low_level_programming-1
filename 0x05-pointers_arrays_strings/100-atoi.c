@@ -16,8 +16,6 @@ int _atoi(char *s)
 		{
 			sign *= -1;
 		}
-
-		
 	}
 
 	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
