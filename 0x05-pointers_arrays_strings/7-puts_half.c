@@ -11,12 +11,9 @@ int len = 0;
 for (len = 0; str[len] != '\0'; len++)
 ;
 
-int i = (len + 1) / 2;
-
-while (i != len)
+for (int i = (len + 1) / 2; i != len; i++)
 {
 	_putchar(str[i]);
-	i++;
 }
 _putchar('\n');
 }
