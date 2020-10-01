@@ -12,7 +12,7 @@ int bytes = 0, i;
 for (i = 0; dest[i] != '\0'; i++)
 ;
 
-for (int a = 0; bytes < n; a++)
+for (int a = 0; bytes < n && dest[a] != '\0'; a++)
 {
 	bytes += sizeof(src[a]);
 	dest[i] = src[a];
