@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * main - check the code for Holberton School students.
@@ -7,9 +8,11 @@
  */
 int main(void)
 {
-    char *str;
+    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
 
-    str = "012345678";
-    puts_half(str);
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
     return (0);
 }
