@@ -1,21 +1,44 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
- * puts2 - prints a string, followed by a new line,
- * @str: pointer to the string to print
- * Return: void
+ * *cap_string - capitalize words
+ * @str: pointer
+ * Return: capitalzied string
 */
 
-void puts2(char *str)
+char *cap_string(char *str)
 {
-int i = 0;
-while (str[i] != '\0')
+
+char sep[] = ",\t;\n; .!?\"(){}";
+int flag;
+
+for (int i = 0; str[i] != '\0'; i++)
 {
-	if (i % 2 == 0)
+	flag = 0;
+
+	if (i == 0)
 	{
-		_putchar(str[i]);
+		flag = 1;
+	}
+	else
+	{
+		for (int ii = 0; sep[ii] != '\0'; ii++)
+		{
+			if (str[i - 1] == sep[ii])
+			{
+				flag = 1;
+				break;
+			}
+		}
 	}
 
-	i++;
+	if (flag == 1)
+	{
+		if (str[i] <= 'z' && str[i] >= 'a')
+		{
+			str[i] -= ('a' - 'A');
+		}
+	}
 }
-_putchar('\n');
+return (str);
 }

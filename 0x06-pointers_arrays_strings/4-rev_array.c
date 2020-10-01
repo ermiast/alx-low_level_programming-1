@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * rev_string - prints reversed string, followed by a new line
- * @s: pointer to the string to print
+ * reverse_array - reverse a int array
+ * @a: pointer
+ * @n: array length
  * Return: void
 */
 
@@ -9,8 +10,6 @@ void reverse_array(int *a, int n)
 {
 
 int i, half;
-//char temp;
-
 i = 0;
 
 half = n / 2;

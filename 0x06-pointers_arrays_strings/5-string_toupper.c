@@ -1,29 +1,18 @@
 #include "holberton.h"
 /**
- * rev_string - prints reversed string, followed by a new line
- * @s: pointer to the string to print
- * Return: void
+ * *string_toupper - capitalize a string
+ * @*: pointer
+ * Return: capitalzied string
 */
 
-void rev_string(char *s)
+char *string_toupper(char *str)
 {
-
-int len, i, half;
-char temp;
-
-for (len = 0; s[len] != '\0'; len++)
-;
-
-i = 0;
-
-half = len / 2;
-
-while (half--)
+for (int i = 0; str[i] != '\0'; i++)
 {
-	temp = s[len - i - 1];
-	s[len - i - 1] = s[i];
-	s[i] = temp;
-	i++;
+	if (str[i] <= 'z' && str[i] >= 'a')
+	{
+		str[i] -= ('a' - 'A');
+	}
 }
-
+return (str);
 }
