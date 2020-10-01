@@ -1,14 +1,23 @@
 #include "holberton.h"
 /**
- * swap_int - swap variable values
- * @a: pointer 1
- * @b: pointer 2
+ * *_strncat - concatenates n bytes of two strings
+ * @dest: pointer destination
+ * @src: pointer source
  * Return: void
 */
 
-void swap_int(int *a, int *b)
+char *_strncat(char *dest, char *src, int n)
 {
-*a += *b;
-*b = *a - *b;
-*a = *a - *b;
+int bytes = 0, i;
+for (i = 0; dest[i] != '\0'; i++)
+;
+
+for (int a = 0; bytes < n; a++)
+{
+	bytes += sizeof(src[a]);
+	dest[i] = src[a];
+	i++;
+}
+
+return (dest);
 }
