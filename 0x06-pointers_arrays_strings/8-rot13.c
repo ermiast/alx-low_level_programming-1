@@ -1,6 +1,5 @@
 
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * *rot13 - encodes a string using rot13.
@@ -21,9 +20,9 @@ for (i = 0; s[i] != '\0'; i++)
 		if (s[i] <= 'z' && s[i] >= 'a' && s[i] == input[ii])
 		{
 			s[i] = output[ii];
+			break;
 		}
 	}
 }
-
 return (s);
 }

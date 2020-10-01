@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * *cap_string - capitalize words
  * @str: pointer
