@@ -3,27 +3,27 @@
 #include <stdio.h>
 
 /**
- * print_array - print `n` elements of an array of integers
- * @a: int type array pointer
- * @n: int type integer
- * Description: Numbers must be separated by comma and space.
- * Numbers should be displayed in the same order they are stored in array.
- * You can only use _putchar to print.
+ * *rot13 - encodes a string using rot13.
+ * @s: int type array pointer
+ * Return: encoded
  */
 
-void print_array(int *a, int n)
+char *rot13(char *s)
 {
-	int i;
+int i, ii;
+char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	i = 0;
-	for (n--; n >= 0; n--, i++)
+for (i = 0; s[i] != '\0'; i++)
+{
+	for (ii = 0; ii < 54; ii++)
 	{
-		printf("%d", a[i]);
-		if (n > 0)
+		if (s[i] <= 'z' && s[i] >= 'a' && s[i] == input[ii])
 		{
-			printf(", ");
+			s[i] = output[ii];
 		}
 	}
-	printf("\n");
+}
 
+return (s);
 }

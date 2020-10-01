@@ -1,17 +1,17 @@
 #include "holberton.h"
 /**
- * *string_toupper - capitalize a string
- * @str: pointer
- * Return: capitalzied string
+ * *sing_toupper - capitalize a sing
+ * @s: pointer
+ * Return: capitalzied sing
 */
 
-char *string_toupper(char *str)
+char *sing_toupper(char *s)
 {
 int i;
-for (i = 0; str[i] != '\0'; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
-	if (str[i] <= 'z' && str[i] >= 'a')
-		str[i] -= 32;
+	if (s[i] <= 'z' && s[i] >= 'a')
+		s[i] -= 32;
 }
-return (str);
+return (s);
 }

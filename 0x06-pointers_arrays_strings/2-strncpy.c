@@ -4,7 +4,7 @@
  * @dest: pointer to the string
  * @src: pointer
  * @n: int
- * Return: void
+ * Return: destination
 */
 
 
