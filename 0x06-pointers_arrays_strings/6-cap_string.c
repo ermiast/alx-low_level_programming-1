@@ -10,9 +10,9 @@ char *cap_string(char *str)
 {
 
 char sep[] = ",\t;\n; .!?\"(){}";
-int flag;
+int flag, i, ii;
 
-for (int i = 0; str[i] != '\0'; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
 	flag = 0;
 
@@ -22,7 +22,7 @@ for (int i = 0; str[i] != '\0'; i++)
 	}
 	else
 	{
-		for (int ii = 0; sep[ii] != '\0'; ii++)
+		for (ii = 0; sep[ii] != '\0'; ii++)
 		{
 			if (str[i - 1] == sep[ii])
 			{
