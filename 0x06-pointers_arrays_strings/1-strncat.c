@@ -8,15 +8,13 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-int bytes = 0, i;
+int i;
 for (i = 0; dest[i] != '\0'; i++)
 ;
 
-for (int a = 0; bytes < n && dest[a] != '\0'; a++)
+for (int a = 0; a < n && dest[a] != '\0'; a++, i++)
 {
-	bytes += sizeof(src[a]);
 	dest[i] = src[a];
-	i++;
 }
 
 return (dest);
