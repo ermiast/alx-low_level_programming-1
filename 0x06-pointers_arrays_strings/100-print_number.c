@@ -6,26 +6,6 @@
  * Return: void
  */
 
-/**
- * 
-252
-
-integer / place value
-252/100  = 2
-
-252 - 2 * 100 = 52
-check if the last response has more than 1 digits
-	If so, go back to step one, with this new value of n
-	if not, print it.
-	
-End
-
-# the loop restarts
-100/10
-52 / 10 = 5
-52 - 50 = 2
-
-*/
 void print_number(int n)
 {
 int divisor = 1, i, resp;
