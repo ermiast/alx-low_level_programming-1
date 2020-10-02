@@ -16,17 +16,14 @@ if (n < 0)
 	n *= -1;
 }
 
-for (i = 0; n / divisor > 9; i++)
-{
-	divisor *= 10;
-}
+for (i = 0; n / divisor > 9; i++, divisor *= 10)
+;
 
-for (; divisor >= 10; divisor /= 10)
+for (; divisor >= 1; divisor /= 10)
 {
 	resp = n / divisor;
 	_putchar('0' + resp);
-	n = n - resp * divisor;
+	n = n % divisor;
 }
-_putchar('0' + n);
 
 }
