@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i = 0;
-	long int a = 0, b = 1, next = 0;
+	int a = 0, b = 1, next = 0;
 
 	while (next < 98)
 	{
