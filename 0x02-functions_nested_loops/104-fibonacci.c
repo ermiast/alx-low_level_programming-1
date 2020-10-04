@@ -11,12 +11,12 @@ int main(void)
 	int i = 0;
 	int a = 0, b = 1, next = 0;
 
-	while (next < 98)
+	while (a + b < 98)
 	{
 		next = a + b;
 		a = b;
 		b = next;
-		printf("%lu", next);
+		printf("%i", next);
 
 		if (a + b < 98)
 		{
