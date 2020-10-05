@@ -1,26 +1,21 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_diagsums - description
+ * @a: 2d array of int types
+ * @size: size of array (square)
  */
-int main(void)
-{
-    char s1[98] = "Hello ";
-    char s2[] = "World!\n";
-    char *p;
 
-    printf("%s\n", s1);
-    printf("%s", s2);
-    p = _strncat(s1, s2, 1);
-    printf("%s\n", s1);
-    printf("%s", s2);
-    printf("%s\n", p);
-    p = _strncat(s1, s2, 1024);
-    printf("%s", s1);
-    printf("%s", s2);
-    printf("%s", p);
-    return (0);
+void print_diagsums(int *a, int size)
+{
+	int i, sum1 = 0, sum2 = 0;
+
+	for (i = 0; i < size; i++)
+	{
+		sum1 += a[i];
+		sum2 += a[size - i - 1];
+		a += size;
+	}
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
