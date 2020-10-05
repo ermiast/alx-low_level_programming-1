@@ -1,23 +1,26 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * *_memset - fills memory with a constant byte.
+ * *_strchr - fills memory with a constant byte.
  * @s: pointer to put the constant
- * @b: constant
- * @n: max bytes to use
+ * @c: constant
  * Return: s
  */
 
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strchr(char *s, char c)
 {
 	int i;
+	char *ptr;
 
-	for (i = 0; i <= n ; i++)
+	for (i = 0; s[i] != '\0'  ; i++)
 	{
-		s[i] = b;
+		if (s[i] == c)
+		{
+			ptr = &s[i];
+			return (ptr);
+		}
 	}
-
-	return (s);
+	return ('\0');
 }
+ 
