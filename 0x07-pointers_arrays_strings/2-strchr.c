@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "stdio.h"
 
 /**
  * *_strchr - fills memory with a constant byte.
@@ -16,9 +17,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			break;
+			return (s + i);
 		}
 	}
-	
-	return (s + i);
+
+	return (NULL);
 }
