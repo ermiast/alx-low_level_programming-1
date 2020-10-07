@@ -1,31 +1,23 @@
 #include "holberton.h"
 
 /**
- * factorial - description
- * @s: string
- * @accept: pointer
+ * factorial - finds factorial
+ * @n: int
  * Return: int
  */
 
-
 int factorial(int n)
 {
-	int i, j, cmpt = 0;
 
-	for (i = 0; s[i] >= '\0'; i++)
-	{
-		for (j = 0; accept[j] > '\0'; j++)
-		{
-			if (s[i] == accept[j])
-			{
-				cmpt++;
-				break;
-			}
-		}
-		if (accept[j] == '\0')
-		{
-			break;
-		}
-	}
-	return (cmpt);
+if (n < 0)
+{
+	return (-1);
+}
+else if (n == 0)
+{
+	return (1);
+}
+
+return (n * factorial(n - 1));
+
 }

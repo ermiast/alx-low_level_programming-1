@@ -1,23 +1,19 @@
 #include "holberton.h"
 
 /**
- * _strlen_recursion - fills memory with a constant byte.
- * @s: pointer to put the constant
- * @c: constant
- * Return: s
+ * _strlen_recursion - returns the length of a string
+ * @s: pointer the string
+ * Return: int
  */
 
 int _strlen_recursion(char *s)
 {
-	int i;
+int n = 0;
 
-	for (i = 0; s[i] >= '\0'  ; i++)
-	{
-		if (s[i] == c)
-		{
-			return (s + i);
-		}
-	}
+if (*s > '\0')
+{
+	n += _strlen_recursion(s + 1) + 1;
+}
 
-	return ('\0');
+return (n);
 }
