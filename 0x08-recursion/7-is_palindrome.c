@@ -33,6 +33,7 @@ return (check(s, 0, end - 1, end % 2));
  * @s: string
  * @start: int moves from right to left
  * @end: int moves from left to right
+ * @pair: int
  * Return: 0 or 1
  */
 
