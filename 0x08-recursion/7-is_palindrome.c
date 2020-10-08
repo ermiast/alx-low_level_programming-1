@@ -8,8 +8,7 @@
 
 int is_palindrome(char *s)
 {
-int end = _strlen_recursion(s) - 1;
-return (check(s, 0, end));
+return (check(s, 0, last_index(s)));
 }
 
 /**
@@ -24,33 +23,25 @@ int check(char *s, int start, int end)
 {
 
 if (start == end - 1 || start == end)
-{
 	return (1);
-}
 else if (s[start] != s[end])
-{
 	return (0);
-}
 else
-{
 	return (check(s, start + 1, end - 1));
-}
 }
 
 /**
- * _strlen_recursion - returns the length of a string
+ * last_index - returns the last index of a string
  * @s: pointer the string
  * Return: int
  */
 
-int _strlen_recursion(char *s)
+int last_index(char *s)
 {
 int n = 0;
 
 if (*s > '\0')
-{
-	n += _strlen_recursion(s + 1) + 1;
-}
+	n += last_index(s + 1) + 1;
 
-return (n);
+return (n - 1);
 }
