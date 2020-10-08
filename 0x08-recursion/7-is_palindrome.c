@@ -36,12 +36,6 @@ return (check(s, 0, end - 1, end % 2));
  * @end: int moves from left to right
  * @pair: int
  * Return: 0 or 1
- * 
- * a b c d e f
- * 
- * start: 3
- * end: 
- * 
  */
 
 
