@@ -1,9 +1,4 @@
 #include "holberton.h"
-/**
- * is_palindrome - check if a string is a palindrome
- * @s: string to check
- * Return: 0 or 1
- */
 
 /**
  * last_index - returns the last index of a string (counts the null char)
@@ -21,6 +16,11 @@ if (*s > '\0')
 return (n);
 }
 
+/**
+ * is_palindrome - check if a string is a palindrome
+ * @s: string to check
+ * Return: 0 or 1
+ */
 
 int is_palindrome(char *s)
 {
