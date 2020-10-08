@@ -1,21 +1,56 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * is_palindrome - description
- * @a: 2d array of int types
- * @size: size of array (square)
+ * is_palindrome - check if a string is a palindrome
+ * @s: string to check
+ * Return: 0 or 1
  */
 
 int is_palindrome(char *s)
 {
-	int i, sum1 = 0, sum2 = 0;
+int end = _strlen_recursion(s) - 1;
+return (check(s, 0, end));
+}
 
-	for (i = 0; i < size; i++)
-	{
-		sum1 += a[i];
-		sum2 += a[size - i - 1];
-		a += size;
-	}
-	printf("%d, ", sum1);
-	printf("%d\n", sum2);
+/**
+ * check - checker for the palindrome
+ * @s: string
+ * @start: int moves from right to left
+ * @end: int moves from left to right
+ * Return: 0 or 1
+ */
+
+int check(char *s, int start, int end)
+{
+
+if (start == end - 1 || start == end)
+{
+	return (1);
+}
+else if (s[start] != s[end])
+{
+	return (0);
+}
+else
+{
+	return (check(s, start + 1, end - 1));
+}
+}
+
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: pointer the string
+ * Return: int
+ */
+
+int _strlen_recursion(char *s)
+{
+int n = 0;
+
+if (*s > '\0')
+{
+	n += _strlen_recursion(s + 1) + 1;
+}
+
+return (n);
 }
