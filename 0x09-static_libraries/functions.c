@@ -336,10 +336,8 @@ unsigned int _strspn(char *s, char *accept)
                 break;
             }
         }
-        if (accept == '\0')
-        {
+        if (*accept == '\0')
             break;
-        }
     }
     return (cmpt);
 }
