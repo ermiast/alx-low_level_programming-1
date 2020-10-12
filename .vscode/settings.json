@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "hash_map": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "*.a": "c"
     }
 }
