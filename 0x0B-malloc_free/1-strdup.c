@@ -11,16 +11,18 @@
 
 char *_strdup(char *str)
 {
-int i, size;
+int i = 0, size = 0;
 char *m;
+
 for (size = 0; str[size] != '\0'; size++)
 ;
 
+/*+1 on the size puts the end of string character*/
 m = malloc(size * sizeof(*str) + 1);
 
 if (size > 0 && m != 0)
 {
-	for (i = 0; i < size; i++)
+	for (; i < size; i++)
 		m[i] = str[i];
 	return (m);
 }
