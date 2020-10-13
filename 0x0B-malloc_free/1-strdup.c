@@ -30,6 +30,5 @@ else
 	for (; i < size; i++)
 		m[i] = str[i];
 }
-
 return (m);
 }
