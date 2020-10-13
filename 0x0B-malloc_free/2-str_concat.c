@@ -1,20 +1,41 @@
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - prints the number of arguments passed into the program
- * @argc: int
- * @argv: list
- * Return: 0
+ * *_strlen: find length of a string
+ * @s: string
+ * Return: int
  */
 
-int main(int argc, char const *argv[])
+int _strlen(char *s)
 {
-int i = 0;
+int size;
+for (size = 0; s[size] != '\0'; s++)
+;
+return (size);
+}
 
-while (argc--)
+
+/**
+ * *str_concat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: string or NULL
+ */
+
+char *str_concat(char *s1, char *s2)
 {
-	printf("%s\n", argv[i]);
-	i++;
+
+int size1 = _strlen(s1), size2 = _strlen(s2), i = 0, mIndex = 0;
+
+char *m = malloc(size1 * size2 * sizeof(*s1));
+
+if (m != 0)
+{
+	for (; s1[i] != '\0'; i++, mIndex++)
+	{
+		m[mIndex] = str[i];
+	}
+	return (m);
 }
 
 return (0);
