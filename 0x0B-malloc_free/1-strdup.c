@@ -8,22 +8,21 @@
  * @str: string
  * Return: 0
  */
-
 char *_strdup(char *str)
 {
-
-if (*str != 0)
+int i = 0;
+char *ss = malloc(sizeof(*str) + 1);
+if (ss == NULL || str == NULL)
 {
-	char *m = malloc(sizeof(*str) + 1);
-
-	if (m != 0)
-	{
-		for (int i = 0; str[i] != '\0'; i++)
-		{
-			m[i] = str[i];
-		}
-		return (m);
-	}
+return (NULL);
 }
-return ('\0');
+else
+{
+while (ss[i] == '\0' && str[i] != '\0')
+{
+ss[i] = str[i];
+i++;
+}
+return (ss);
+}
 }
