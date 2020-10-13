@@ -29,7 +29,6 @@ else
 {
 	for (; i < size; i++)
 		m[i] = str[i];
-	m[i] = '\0';
 }
 
 return (m);
