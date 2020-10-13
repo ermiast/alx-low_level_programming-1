@@ -1,58 +1,35 @@
-#include <stdio.h>
 #include <stdlib.h>
 /**
- * isInteger - checks if s is an integer
+ * *argstostr - description
  * @s: string to check
  * Return: 0 or 1
  */
 
-int isInteger(const char *s)
+char *argstostr(int ac, char **av);
 {
-int i = 0;
-while (s[i] != '\0')
+int i = 0, nc = 0, j = 0, cmpt = 0;
+char *s;
+
+if (ac == 0 || av == NULL)
+	return (NULL);
+
+for (; i < ac; i++)
 {
-	if (s[i] < '0' || s[i] > '9')
-		return (0);
-	i++;
-}
-return (1);
+	for (; av[i][j] != '\0'; j++)
+		nc++;
+	nc++;
 }
 
-/**
- * main - adds positive numbers
- * @argc: int
- * @argv: list
- * Return: 0
- */
+s = malloc(ac * (sizeof(*s) * nc));
 
-int main(int argc, char const *argv[])
+for (cmpt, i = 0; i < ac; i++)
 {
-int i = 0, coinUsed = 0, coin = 0;
-int coins[] = {25, 10, 5, 2, 1};
-
-if (argc != 2)
-{
-	printf("Error\n");
-	return (1);
-}
-if (isInteger(argv[1]))
-{
-	i = atoi(argv[1]);
-	while (i > 0 && coin <= 4)
-	{
-		if (i >= coins[coin])
-		{
-			i -= coins[coin];
-			coinUsed++;
-		}
-		else
-		{
-			coin++;
-		}
+	for (cmpt, j = 0; av[i][j] != '\0'; j++){
+		s[cmpt] = av[i][j];
+		cmpt++;
 	}
+	s[cmpt] = '\n';
 }
 
-printf("%i\n", coinUsed);
-
-return (0);
+return (s);
 }
