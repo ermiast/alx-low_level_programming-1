@@ -14,7 +14,7 @@ char *_strdup(char *str)
 int i = 0, size = 0;
 char *m;
 
-for (size = 0; str[size] != '\0'; size++)
+for (; str[size] != '\0'; size++)
 ;
 
 /*+1 on the size puts the end of string character*/
@@ -27,6 +27,6 @@ if (size > 0 && m != 0)
 	m[i] = '\0';
 	return (m);
 }
-
+free(m);
 return (NULL);
 }
