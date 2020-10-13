@@ -1,8 +1,9 @@
 #include <stdlib.h>
 /**
  * *argstostr - description
- * @s: string to check
- * Return: 0 or 1
+ * @ac: int
+ * @av: arguments
+ * Return: string
  */
 
 char *argstostr(int ac, char **av)
