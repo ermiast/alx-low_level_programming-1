@@ -24,6 +24,7 @@ if (size > 0 && m != 0)
 {
 	for (; i < size; i++)
 		m[i] = str[i];
+	m[i] = '\0';
 	return (m);
 }
 
