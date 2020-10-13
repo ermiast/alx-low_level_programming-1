@@ -16,7 +16,7 @@ char *m;
 for (size = 0; str[size] != '\0'; size++)
 ;
 
-m = malloc(size * sizeof(*str));
+m = malloc(size * sizeof(*str) + 1);
 
 if (size > 0 && m != 0)
 {
