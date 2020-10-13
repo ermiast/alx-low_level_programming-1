@@ -12,7 +12,7 @@ char *_strdup(char *str)
 
 if (*str != 0)
 {
-	char *m = malloc(3);
+	char *m = malloc(sizeof(*str) + 1);
 
 	if (m != 0)
 	{
@@ -23,5 +23,5 @@ if (*str != 0)
 		return (m);
 	}
 }
-return (0);
+return ('\0');
 }
