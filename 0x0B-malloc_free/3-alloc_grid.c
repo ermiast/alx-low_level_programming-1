@@ -1,21 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - print the result of the multiplication, followed by a new line
- * @argc: int
- * @argv: list
- * Return: 0
+ * **alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ * @width: int
+ * @height: int
+ * Return: 2d array
  */
 
-int main(int argc, char const *argv[])
+int **alloc_grid(int width, int height)
 {
-(void)argc;
+int **tab = malloc(sizeof(int) * height), i, j;
 
-if (argc != 3)
+if (width <= 0 || height <= 0)
+	return (NULL);
+else
 {
-	printf("Error\n");
-	return (1);
+	for (i = 0; i < height; i++)
+	{
+		tab[i] = malloc(sizeof(int) * width);
+		for (j = 0; j < width; j++)
+		{
+			tab[i][j] = 0;
+		}
+	}
 }
-printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
-return (0);
+
+return (tab);
 }
