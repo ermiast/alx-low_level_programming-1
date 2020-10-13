@@ -5,7 +5,7 @@
  * Return: 0 or 1
  */
 
-char *argstostr(int ac, char **av);
+char *argstostr(int ac, char **av)
 {
 int i = 0, nc = 0, j = 0, cmpt = 0;
 char *s;
@@ -22,13 +22,13 @@ for (; i < ac; i++)
 
 s = malloc(ac * (sizeof(*s) * nc));
 
-for (cmpt, i = 0; i < ac; i++)
+for (i = 0; i < ac; i++)
 {
-	for (cmpt, j = 0; av[i][j] != '\0'; j++){
+	for (j = 0; av[i][j] != '\0'; j++, cmpt++)
 		s[cmpt] = av[i][j];
-		cmpt++;
-	}
+
 	s[cmpt] = '\n';
+	cmpt++;
 }
 
 return (s);
