@@ -27,17 +27,18 @@ return (size);
 char *str_concat(char *s1, char *s2)
 {
 
-int size1 = _strlen(s1), size2 = _strlen(s2), i, mIndex = 0;
-char *m = malloc(size1 * sizeof(*s1) + size2 * sizeof(*s1) + 1);
+int size1 = _strlen(s1), size2 = _strlen(s2), i;
+char *m = malloc((size1 + size2) * sizeof(char) + 1);
 
 if (m == NULL)
 	return (NULL);
 
-for (i = 0; s1[i] != '\0'; i++, mIndex++)
-	m[mIndex] = s1[i];
-
-for (i = 0; s2[i] != '\0'; i++, mIndex++)
-	m[mIndex] = s2[i];
+for (i = 0; i < size1 + size2; i++){
+	if (i < size1)
+		m[i] = s1[i];
+	else
+		m[i] = s2[i - size1];
+}
 
 return (m);
 }
