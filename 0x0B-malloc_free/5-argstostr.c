@@ -32,7 +32,7 @@ char *s;
 if (ac == 0 || av == NULL)
 	return (NULL);
 
-for (; i < ac; i++)
+for (; i < ac; i++, nc++)
 	nc += _strlen(av[i]);
 
 s = malloc(sizeof(*s) * nc);
