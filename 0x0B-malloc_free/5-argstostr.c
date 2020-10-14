@@ -36,7 +36,6 @@ for (; i < ac; i++, nc++)
 	nc += _strlen(av[i]);
 
 s = malloc(sizeof(*s) * nc);
-printf("ac: %i | nc: %i | size: %lu\n", ac, nc, sizeof(*s) * nc);
 
 for (i = 0; i < ac; i++)
 {
