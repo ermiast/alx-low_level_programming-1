@@ -1,4 +1,22 @@
 #include <stdlib.h>
+#include <stdio.h>
+
+
+/**
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+
+int _strlen(char *s)
+{
+int size = 0;
+for (; s[size] != '\0'; size++)
+;
+return (size);
+}
+
 /**
  * *argstostr - description
  * @ac: int
@@ -15,13 +33,10 @@ if (ac == 0 || av == NULL)
 	return (NULL);
 
 for (; i < ac; i++)
-{
-	for (; av[i][j] != '\0'; j++)
-		nc++;
-	nc++;
-}
+	nc += _strlen(av[i]);
 
-s = malloc(ac * (sizeof(*s) * nc));
+s = malloc(sizeof(*s) * nc);
+printf("ac: %i | nc: %i | size: %lu\n", ac, nc, sizeof(*s) * nc);
 
 for (i = 0; i < ac; i++)
 {
