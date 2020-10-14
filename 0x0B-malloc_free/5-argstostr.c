@@ -36,6 +36,8 @@ for (; i < ac; i++, nc++)
 	nc += _strlen(av[i]);
 
 s = malloc(sizeof(char) * nc);
+if (s == 0)
+	return (NULL);
 
 for (i = 0; i < ac; i++)
 {
