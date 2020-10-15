@@ -1,21 +1,27 @@
 #include <stdlib.h>
 
 /**
- * *create_array - creates an array of chars,
- * and initializes it with a specific char.
- * @size: size of the array
- * @c: char to initialize
+ * *array_range -  create an array of integers
+ * @min: size of the array
+ * @max: char to initialize
  * Return: pointer to the array initialized or NULL
  */
 
-char *create_array(unsigned int size, char c)
+int *array_range(int min, int max)
 {
-char *m = malloc(size);
-if (size == 0 || m == 0)
-	return (0);
+char **m;
+int i;
 
-while (size--)
-	m[size] = c;
+if (min > max)
+	return (NULL);
+
+m = malloc((max - min) * sizeof(int));
+
+if (m == 0)
+	return (NULL);
+
+for (i = 0; min <= max; i++, min++)
+	m[i] = min;
 
 return (m);
 }

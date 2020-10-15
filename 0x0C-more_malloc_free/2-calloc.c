@@ -1,21 +1,29 @@
 #include <stdlib.h>
 
 /**
- * *create_array - creates an array of chars,
- * and initializes it with a specific char.
- * @size: size of the array
- * @c: char to initialize
- * Return: pointer to the array initialized or NULL
+ * *_calloc - allocates memory for an array, using malloc
+ * @nmemb: array length
+ * @size: size of each element
+ * Return: pointer
  */
 
-char *create_array(unsigned int size, char c)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *m = malloc(size);
-if (size == 0 || m == 0)
-	return (0);
+char **m;
+int i;
 
-while (size--)
-	m[size] = c;
+if (size == 0 || nmemb == 0)
+	return (NULL);
+
+m = malloc(nmemb);
+
+if (m == 0)
+	return (NULL);
+
+for (i = 0; i < nmemb; i++)
+{
+	m[i] = malloc(size);
+}
 
 return (m);
 }
