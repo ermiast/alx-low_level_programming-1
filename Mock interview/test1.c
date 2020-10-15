@@ -1,12 +1,18 @@
 #include <stdio.h>
-/**
- *main - prints a string
-*Return: 0
-*/
+#include <stdlib.h>
+#include <string.h>
 
-int main(void)
+int cp(void)
 {
+    char *s;
 
-printf("with proper grammer, but the outcome is a piece of art, \n");
-return(0);
+    s = malloc(9);
+    strcpy(s, "Holberton");
+    puts(s);
+    return (0);
+}
+
+int main(void) {
+  cp();
+  return 0;
 }
