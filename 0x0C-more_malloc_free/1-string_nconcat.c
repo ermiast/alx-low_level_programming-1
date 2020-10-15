@@ -12,7 +12,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 unsigned int i, j;
 char *m = malloc(sizeof(s1) + n * sizeof(char) + 1);
-
+printf("%lu\n", sizeof(s1) + n * sizeof(char) + 1);
 if (m == 0)
 	return (NULL);
 if (s1 == NULL)
