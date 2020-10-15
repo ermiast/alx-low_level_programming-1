@@ -33,7 +33,10 @@ if (s1 == NULL)
 if (s2 == NULL)
 	s2 = "";
 
-m = malloc(_strlen(s1) + n * sizeof(char) + 1);
+if (n < _strlen(s1))
+	m = malloc(_strlen(s1) + n * sizeof(char) + 1);
+else
+	m = malloc(_strlen(s1) + _strlen(s1) + 1);
 
 if (m == 0)
 	return (NULL);
