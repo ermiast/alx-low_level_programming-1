@@ -21,9 +21,8 @@ m = malloc((max - min + 1) * sizeof(int));
 if (m == 0)
 	return (NULL);
 
-for (i = 0; min + i <= max; i++){
+for (i = 0; min + i <= max; i++)
 	m[i] = min + i;
-}
 
 return (m);
 }
