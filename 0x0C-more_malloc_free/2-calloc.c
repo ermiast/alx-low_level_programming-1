@@ -28,7 +28,7 @@ return (ptr);
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *m;
+int *m;
 
 if (size == 0 || nmemb == 0)
 	return (NULL);
