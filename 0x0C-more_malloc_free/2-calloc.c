@@ -22,7 +22,7 @@ if (m == 0)
 	return (NULL);
 
 for (i = 0; i < nmemb; i++)
-	*(m + i) = 0;
+	*(m + (i)) = 0;
 
 return (m);
 }
