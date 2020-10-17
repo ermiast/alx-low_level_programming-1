@@ -47,7 +47,7 @@ for (i = 0; i < ac; i++)
 	s[cmpt] = '\n';
 	cmpt++;
 }
-c[cmpt] = '\0';
+s[cmpt] = '\0';
 
 return (s);
 }
