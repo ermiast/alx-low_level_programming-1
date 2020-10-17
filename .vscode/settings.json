@@ -2,6 +2,10 @@
     "files.associations": {
         "hash_map": "c",
         "algorithm": "c",
-        "*.a": "c"
+        "*.a": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
     }
 }
