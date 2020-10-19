@@ -20,9 +20,23 @@ mydog = malloc(sizeof(struct dog));
 if (mydog == NULL)
 	return (NULL);
 
-strcpy(mydog->name, name);
+mydog->name = strdup(name);
+
+if (mydog->name == NULL)
+{
+	free(mydog);
+	return (NULL);
+}
+
+mydog->owner = strdup(owner);
+
+if (mydog->owner == NULL){
+	free(mydog->name);
+	free(mydog);
+	return (NULL);
+}
+
 mydog->age = age;
-strcpy(mydog->owner, owner);
 
 return (mydog);
 }
