@@ -1,15 +1,25 @@
-#include "dog.h"
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * print_name - prints a name
- * @d: struct dog
- * @name: string for name
- * @age: integer for age
- * @owner: string for owners
+ * int_index - searches for an integer
+ * @array: array of integers
+ * @size: size of array
+ * @cmp: function pointer
+ * Return: index of first element that matches with `cmp`, or -1 if none found
  */
 
-void print_name(char *name, void (*f)(char *))
+int int_index(int *array, int size, int (*cmp)(int))
 {
+	int i = size;
 
+	if (size < 1 || array == NULL || cmp == NULL)
+		return (-1);
+
+	while (size--)
+	{
+		if (cmp(array[i - size]))
+			return (i - size);
+	}
+
+	return (-1);
 }
