@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_numbers - prints all numbers with a separator
@@ -18,10 +19,10 @@ va_start(list, n);
 for (i = 0; i < n; i++)
 {
 	printf("%i", va_arg(list, int));
-	if (i != n && separator != NULL)
+	if (i != n - 1 && separator != NULL)
 		printf("%s", separator);
 }
 va_end(list);
 
-_putchar('\n');
+putchar('\n');
 }
