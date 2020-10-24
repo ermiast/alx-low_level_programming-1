@@ -2,8 +2,8 @@
 #include <stdarg.h>
 
 /**
- * sum_them_all - writes the character c to stdout
- * @n: int, check if args should be summed
+ * sum_them_all -  sum all arguments
+ * @n: int, number of undefined arguments
  *
  * Return: sum of args
  * On error, 0 is returned
