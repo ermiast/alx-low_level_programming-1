@@ -36,8 +36,12 @@ void print_char(va_list list)
 void print_str(va_list list)
 {
 	char *s = va_arg(list, char *);
-
-	printf("%s", s != NULL ? s : "nil");
+	if (s != NULL)
+	{
+		printf("%s", s);
+		return;
+	}
+	printf("nil");
 }
 
 
@@ -76,6 +80,5 @@ while (format[i])
 }
 
 va_end(list);
-
-putchar('\n');
+printf("\n");
 }
