@@ -63,7 +63,7 @@ printTypeStruct printType[] = {
 
 va_start(list, format);
 
-while (format[i])
+while (format[i] && format != NULL)
 {
 	j = 0;
 	while (j < 4)
