@@ -68,11 +68,12 @@ while (format[i])
 	j = 0;
 	while (j < 4)
 	{
-		if (printType[j].type[0] == format[i])
+		if (*printType[j].type == format[i])
 		{
 			printf("%s", sep);
 			printType[j].printer(list);
 			sep = ", ";
+			break;
 		}
 		j++;
 	}
