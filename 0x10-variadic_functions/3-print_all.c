@@ -41,7 +41,7 @@ void print_str(va_list list)
 		printf("%s", s);
 		return;
 	}
-	printf("nil");
+	printf("(nil)");
 }
 
 
