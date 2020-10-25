@@ -13,10 +13,15 @@ void print_float(va_list list);
 void print_char(va_list list);
 void print_str(va_list list);
 
+/**
+ * struct printTypeStruct - structure definition of a printTypeStruct
+ * @type: type
+ * @printer: function to print
+ */
 typedef struct printTypeStruct
 {
-    char *type;
-    void (*printer)(va_list);
+char *type;
+void (*printer)(va_list);
 } printTypeStruct;
 
 #endif

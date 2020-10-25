@@ -73,6 +73,7 @@ while (format[i])
 			printf("%s", sep);
 			printType[j].printer(list);
 			sep = ", ";
+			break;
 		}
 		j++;
 	}
