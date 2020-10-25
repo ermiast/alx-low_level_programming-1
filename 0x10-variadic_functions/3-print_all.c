@@ -36,9 +36,9 @@ void print_char(va_list list)
 void print_str(va_list list)
 {
 	char *s = va_arg(list, char *);
-	if (s != NULL)
+	if (s == NULL)
 		s = "(nil)";
-	printf("(nil)");
+	printf("%s", s);
 }
 
 
@@ -51,6 +51,7 @@ void print_all(const char * const format, ...)
 {
 va_list list;
 int i = 0, j;
+char *sep = "";
 
 printTypeStruct printType[] = {
 	{ "i", print_int },
@@ -68,7 +69,9 @@ while (format[i])
 	{
 		if (printType[j].type[0] == format[i])
 		{
+			printf("%s", sep);
 			printType[j].printer(list);
+			sep = ", ";
 			break;
 		}
 		j++;
