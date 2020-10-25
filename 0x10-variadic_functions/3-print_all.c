@@ -58,7 +58,8 @@ printTypeStruct printType[] = {
 	{ "i", print_int },
 	{ "f", print_float },
 	{ "c", print_char },
-	{ "s", print_str }
+	{ "s", print_str },
+	{NULL, NULL}
 };
 
 va_start(list, format);
