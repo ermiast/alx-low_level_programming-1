@@ -1,13 +1,79 @@
-#include <unistd.h>
+#include "variadic_functions.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * print_int - prints int
+ * @list: arguments from print_all
  */
-int _putchar(char c)
+void print_int(va_list list)
 {
-	return (write(1, &c, 1));
+	printf("%d", va_arg(list, int));
+}
+
+/**
+ * print_float - prints float
+ * @list: arguments from print_all
+ */
+void print_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+
+/**
+ * print_char - prints int
+ * @list: arguments from print_all
+ */
+void print_char(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+
+/**
+ * print_str - prints string
+ * @list: arguments from print_all
+ */
+void print_str(va_list list)
+{
+	printf("%s", va_arg(list, char *));
+}
+
+
+/**
+ * print_all - prints any type
+ * @format: arguments to print
+ */
+
+void print_all(const char * const format, ...)
+{
+va_list list;
+int i = 0, j;
+
+printTypeStruct printType[] = {
+	{ "i", print_int },
+	{ "f", print_float },
+	{ "c", print_char },
+	{ "s", print_str }
+};
+
+va_start(list, format);
+
+while (format[i])
+{
+	j = 0;
+	while (j < 4)
+	{
+		if (printType[j].type[0] == format[i])
+		{
+			printType[j].printer(list);
+			break;
+		}
+		j++;
+	}
+	i++;
+}
+
+va_end(list);
+
+putchar('\n');
 }
