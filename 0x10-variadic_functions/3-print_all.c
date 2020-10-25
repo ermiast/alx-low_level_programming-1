@@ -51,7 +51,7 @@ void print_str(va_list list)
 void print_all(const char * const format, ...)
 {
 va_list list;
-int i = 0, j;
+unsigned int i = 0, j;
 char *sep = "";
 
 printTypeStruct printType[] = {
@@ -79,7 +79,6 @@ while (format[i])
 	}
 	i++;
 }
-
-va_end(list);
 printf("\n");
+va_end(list);
 }
