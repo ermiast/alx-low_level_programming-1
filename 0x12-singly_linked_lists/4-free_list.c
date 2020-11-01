@@ -1,13 +1,21 @@
-#include <unistd.h>
+#include "lists.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * free_list - frees a list_t list
+ * @head: head of linked list
  */
-int _putchar(char c)
+void free_list(list_t *head)
 {
-	return (write(1, &c, 1));
+	list_t *current;
+	list_t *nxt;
+
+	current = head;
+
+	while (current != NULL)
+	{
+		nxt = current->next;
+		free(current->str);
+		free(current);
+		current = nxt;
+	}
 }
