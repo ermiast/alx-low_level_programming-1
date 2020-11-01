@@ -1,13 +1,22 @@
-#include <unistd.h>
+#include "lists.h"
+#include <stdio.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * list_len -  returns the number of elements in a linked list_t list.
+ * @h: linked list
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: number of elements
  */
-int _putchar(char c)
+
+size_t list_len(const list_t *h)
 {
-	return (write(1, &c, 1));
+	size_t nbr_element = 0;
+	const list_t *current = h;
+
+	while (current != NULL)
+	{	
+		current = current->next;
+		nbr_element++;
+	}
+	return (nbr_element);
 }
