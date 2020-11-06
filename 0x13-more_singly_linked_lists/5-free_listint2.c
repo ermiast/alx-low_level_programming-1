@@ -5,12 +5,13 @@
  * @head: head of linked list
  */
 
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *current;
 	listint_t *next;
 
-	current = head;
+	current = head->next;
+    head = NULL;
 
 	while (current != NULL)
 	{
@@ -18,4 +19,5 @@ void free_listint(listint_t *head)
 		free(current);
 		current = next;
 	}
+
 }
