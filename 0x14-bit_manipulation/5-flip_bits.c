@@ -1,23 +1,14 @@
-#include "lists.h"
+#include "holberton.h"
 
 /**
- * free_listint - frees a listint_t list
- * @head: head of linked list
+ * flip_bits -  returns the number of bits you would 
+ * need to flip to get from one number to another.
+ * @n: int
+ * @m: int
+ * Return: int
  */
 
-void free_listint(listint_t *head)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	listint_t *current;
-	listint_t *next;
-
-	current = head->next;
-    head = NULL;
-
-	while (current != NULL)
-	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
 
 }

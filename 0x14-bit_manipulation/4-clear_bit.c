@@ -1,21 +1,13 @@
-#include "lists.h"
+#include "holberton.h"
 
 /**
- * free_listint - frees a listint_t list
- * @head: head of linked list
+ * clear_bit - gets bit on index `index`
+ * @n: decimal number
+ * @index: index of the bit
+ * Return: 1 (success) or -1(faillure)
  */
 
-void free_listint(listint_t *head)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	listint_t *current;
-	listint_t *next;
 
-	current = head;
-
-	while (current != NULL)
-	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
 }

@@ -1,37 +1,13 @@
 #include "holberton.h"
 
 /**
- * _pow_recursion - Search a string for any of a set of bytes.
- * @x: base
- * @y: exposant
- * Return: Pointer to the byte in `s` that matches one of the bytes in `accept`
- * or NULL if no such byte is found.
- */
-
-unsigned long int _pow_recursion(int x, int y)
-{
-
-if (y < 0)
-	return (-1);
-else if (y == 1)
-	return (x);
-else if (y == 0)
-	return (1);
-
-return (x * _pow_recursion(x, y - 1));
-
-}
-
-
-/**
- * get_bit - gets bit on index `index`
+ * set_bit - gets bit on index `index`
  * @n: decimal number
  * @index: index of the bit
- * Return: the bit found
+ * Return: 1 (success) or -1(faillure)
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	*n = *n | _pow_recursion(2, index);
-	return (1);
+	return ((*n >> index) & 1);
 }

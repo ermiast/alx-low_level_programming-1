@@ -9,10 +9,13 @@
 
 void print_binary(unsigned long int n)
 {
-int i, k, andmask;
+int i, k, andmask, change;
 int firstOne = 0;
+unsigned long int max = 1;
 
-for (i = 15 ; i >= 0 ; i--)
+for (max = 0, change = 0; max <=n; max = max << 1, change++)
+
+for (i = change; i >= 0 ; i--)
 {
 andmask = 1 << i;
 k = n & andmask;
