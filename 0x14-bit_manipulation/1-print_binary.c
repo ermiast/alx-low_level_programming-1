@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * print_binary - prints decimal to binary
  * Description: first, finds the biggest exponent for 2, then go down
