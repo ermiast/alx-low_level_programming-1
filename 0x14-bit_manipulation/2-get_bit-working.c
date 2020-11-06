@@ -30,8 +30,30 @@ return (x * _pow_recursion(x, y - 1));
  * Return: the bit found
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	*n = *n | _pow_recursion(2, index);
-	return (1);
+	unsigned int i;
+
+	for (i = 0; _pow_recursion(2, i) <= n; i++)
+	;
+
+	if (n == 0)
+		i++;
+
+	do {
+		i--;
+		if (i == index)
+		{
+			if (_pow_recursion(2, i) <= n)
+				return (1);
+			else
+				return (0);
+		}
+
+		if (_pow_recursion(2, i) <= n)
+			n -= _pow_recursion(2, i);
+
+	} while (i != 0);
+
+	return (-1);
 }

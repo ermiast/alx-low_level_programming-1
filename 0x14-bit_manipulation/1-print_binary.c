@@ -1,22 +1,64 @@
-#include "lists.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * listint_len - returns the number of elements in a linked list `listint_t`.
- * @h: linked list
- *
- * Return: number of elements
+ * _pow_recursion - Search a string for any of a set of bytes.
+ * @x: base
+ * @y: exposant
+ * Return: Pointer to the byte in `s` that matches one of the bytes in `accept`
+ * or NULL if no such byte is found.
  */
 
-size_t listint_len(const listint_t *h)
+unsigned long int _pow_recursion(int x, int y)
 {
-	size_t nbr_element = 0;
-	const listint_t *current = h;
 
-	while (current != NULL)
+if (y < 0)
+	return (-1);
+else if (y == 1)
+	return (x);
+else if (y == 0)
+	return (1);
+
+return (x * _pow_recursion(x, y - 1));
+
+}
+
+
+/**
+ * print_binary - prints decimal to binary
+ * Description: first, finds the biggest exponent for 2, then go down
+ * to find the smaller values
+ * @n: decimal number
+ */
+
+void print_binary(unsigned long int n)
+{
+	int i;
+
+	for (i = 0; _pow_recursion(2, i) <= n; i++)
+	;
+	if (n == 0)
+		i++;
+
+	for (i--; i >= 0; i--)
 	{
-		current = current->next;
-		nbr_element++;
+		if (_pow_recursion(2, i) <= n)
+		{
+			_putchar('1');
+			n -= _pow_recursion(2, i);
+		}
+		else
+			_putchar('0');
 	}
-	return (nbr_element);
+}
+
+/*Use this function, and the first print should be a 1*/
+showbits ( int n )
+{
+int i, k, andmask ;
+for ( i = 15 ; i >= 0 ; i-- )
+{
+andmask = 1 << i ;
+k = n & andmask ;
+k == 0 ? printf ( "0" ) : printf ( "1" ) ;
+}
 }

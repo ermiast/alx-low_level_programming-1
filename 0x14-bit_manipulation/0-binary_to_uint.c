@@ -1,6 +1,22 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
+
+/**
+ * _strlen - find the length of a string
+ * @s: pointer to the string to check
+ * Return: void
+*/
+
+
+int _strlen(char *s)
+{
+int i = 0;
+while (s[i])
+	i++;
+
+return (i);
+}
+
 
 /**
  * _pow_recursion - Search a string for any of a set of bytes.
@@ -39,7 +55,7 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	len = strlen(b);
+	len = _strlen(b);
 	for (i = 0; b[i]; i++)
 	{
 		if (b[i] == '1')
@@ -50,3 +66,5 @@ unsigned int binary_to_uint(const char *b)
 
 	return (n);
 }
+
+/*Use bitwise operations*/
