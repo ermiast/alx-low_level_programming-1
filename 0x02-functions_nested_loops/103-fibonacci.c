@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 0;
-	unsigned long long int a = 0, b = 1, next = 0;
+	int a = 0, b = 1, next = 0;
 
 	while (next < 4000000)
 	{
@@ -16,9 +16,8 @@ int main(void)
 		a = b;
 		b = next;
 		if (next % 2 == 0)
-		{
-			printf("%lu\n", next);
-		}
+			printf("%i\n", next);
+
 		i++;
 	}
 	return (0);
