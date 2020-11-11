@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include <sys/types.h>
-#include <fcntl.h> 
+#include <fcntl.h>
 
 #include <unistd.h>
 
