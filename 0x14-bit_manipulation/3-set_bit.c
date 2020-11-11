@@ -9,5 +9,10 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	return ((*n >> index) & 1);
+	if (index >= (sizeof(unsigned long int) * BYTE_LENGHT))
+		return (-1);
+
+	*n ^= (1 << index);
+
+	return (1);
 }
