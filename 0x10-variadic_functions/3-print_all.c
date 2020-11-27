@@ -60,12 +60,10 @@ printTypeStruct printType[] = {
 	{NULL, NULL}
 };
 
-if (format == NULL)
-	exit(0);
 
 va_start(list, format);
 
-while (format[i])
+while (format && format[i])
 {
 	j = 0;
 	while (j < 4)
