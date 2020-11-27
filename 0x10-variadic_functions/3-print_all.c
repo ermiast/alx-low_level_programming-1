@@ -63,7 +63,7 @@ printTypeStruct printType[] = {
 };
 
 if (!format)
-	return (0);
+	exit(0);
 
 va_start(list, format);
 
