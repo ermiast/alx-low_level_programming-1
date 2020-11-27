@@ -34,13 +34,13 @@ if (new_size == 0)
 		free(ptr);
 	return (0);
 }
-else if (new_size <= old_size)
-{
-	return (ptr);
-}
 else if (!ptr)
 {
 	return (malloc(new_size));
+}
+else if (new_size <= old_size)
+{
+	return (ptr);
 }
 else
 {
