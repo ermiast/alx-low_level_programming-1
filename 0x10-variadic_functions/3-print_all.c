@@ -61,7 +61,7 @@ printTypeStruct printType[] = {
 };
 
 if (format == NULL)
-	exit (0);
+	exit(0);
 
 va_start(list, format);
 
@@ -83,6 +83,5 @@ while (format[i])
 }
 
 printf("\n");
-	
 va_end(list);
 }
