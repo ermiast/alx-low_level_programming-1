@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * *_strspn - description
- * @s: string
- * @accept: pointer
+ * *_strspn - return the number of occurent of a string
+ * @s: string to check
+ * @accept: character to match
  * Return: int
  */
 
