@@ -39,7 +39,7 @@ else if (new_size <= old_size)
 }
 else if (!ptr)
 {
-	return (malloc(new_size));
+	return (new_size > 0 ? malloc(new_size) : 0);
 }
 else
 {
