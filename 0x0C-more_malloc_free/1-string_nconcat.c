@@ -1,11 +1,10 @@
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
  * _strlen - find length of a string
  * @s: string
  * Return: int
  */
-
 
 unsigned int _strlen(char *s)
 {
