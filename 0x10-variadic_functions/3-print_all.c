@@ -37,11 +37,9 @@ void print_str(va_list list)
 {
 	char *s = va_arg(list, char *);
 
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
-}
+	s == NULL ? printf("(nil)") : printf("%s", s);
 
+}
 
 /**
  * print_all - prints any type
@@ -62,7 +60,7 @@ printTypeStruct printType[] = {
 	{NULL, NULL}
 };
 
-if (!format)
+if (format == NULL)
 	exit(0);
 
 va_start(list, format);
