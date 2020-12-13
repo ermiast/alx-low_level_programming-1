@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * add_nodeint_end - add a node at the end of a linked list
+ * add_dnodeint_end - add a node at the end of a linked list
  * @head: The character to print
  * @n: string for the new node
  *
