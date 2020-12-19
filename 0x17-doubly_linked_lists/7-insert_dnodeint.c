@@ -18,7 +18,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	current = *h;
 
-	idx--;
 	while (idx != 0)
 	{
 		current = current->next;
@@ -38,7 +37,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->n = n;
 	new->next = current;
 	new->prev = current->prev;
-	current->prev = new;
+	current->prev->next = new;
 
 	/*TODO: Handle special case when idx is 0 and last index*/
 
