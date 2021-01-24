@@ -14,12 +14,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 hash_node_t *node;
 unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
-if (ht == NULL || key == '\n' || value == '\n')
-	return (NULL);
+if (ht == NULL || *key == '\n' || *value == '\n')
+	return (0);
 
 node = ht->array[index];
 
-/*Handle collision by chaining*/
 while (node != NULL)
 	node = node->next;
 
