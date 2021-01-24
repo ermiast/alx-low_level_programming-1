@@ -30,7 +30,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new->n = n;
 	new->next = current->next;
 	current->next = new;
-	/*Handle special case when idx is 0 and last index*/
+	/*TODO: Handle special case when idx is 0 and last index*/
 
 	return (current);
 }
