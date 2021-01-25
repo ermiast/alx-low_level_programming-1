@@ -33,7 +33,7 @@ else
 {
 	while (1)
 	{
-		if (strcmp(key, node->key))
+		if (strcmp(key, node->key) == 0)
 		{
 			node->value = strdup(value);
 			return (1);
