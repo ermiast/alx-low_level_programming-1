@@ -34,7 +34,6 @@ void free_hash_list(hash_node_t *head)
 	while (current != NULL)
 	{
 		next = current->next;
-		printf("free\n");
 		free(current->key);
 		free(current->value);
 		free(current);
