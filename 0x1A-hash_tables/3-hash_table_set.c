@@ -19,27 +19,59 @@ if (ht == NULL || *key == '\n' || *value == '\n')
 	return (0);
 
 index = key_index((const unsigned char *)key, ht->size);
-
 node = ht->array[index];
-
-new_node = malloc(sizeof(hash_node_t));
-if (new_node == NULL)
-	return (0);
-
-new_node->key = strdup(key);
-new_node->value = strdup(value);
-new_node->next = NULL;
 
 if (node == NULL)
 {
+	new_node = create_new_node(key, value);
+	if (new_node == NULL)
+		return (0);
+
 	ht->array[index] = new_node;
 }
 else
 {
-	while (node->next != NULL)
+	while (1)
+	{
+		if (strcmp(key, node->key))
+		{
+			node->value = strdup(value);
+			return (1);
+		}
+		if (node->next == NULL)
+			break;
+
 		node = node->next;
+	}
+	new_node = create_new_node(key, value);
+	if (new_node == NULL)
+		return (0);
+
 	node->next = new_node;
 }
-
 return (1);
+}
+
+/**
+ * create_new_node - create a new node
+ * @key: is the key. key can not be an empty string
+ * @value: value associated with the key.
+ * value must be duplicated. value can be an empty string
+ * Return: 1 on success, 0 on failurre
+ */
+
+hash_node_t *create_new_node (const char *key, const char *value)
+{
+	hash_node_t *new_node;
+
+	new_node = malloc(sizeof(hash_node_t));
+
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = NULL;
+
+	return (new_node);
 }
