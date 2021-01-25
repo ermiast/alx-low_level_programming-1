@@ -13,8 +13,8 @@ if (ht == NULL)
 
 for (i = 0; i < ht->size; i++)
 {
-    node = ht->array[i];
-    free_hash_list(node);
+	node = ht->array[i];
+	free_hash_list(node);
 }
 free(ht);
 }
@@ -34,9 +34,9 @@ void free_hash_list(hash_node_t *head)
 	while (current != NULL)
 	{
 		next = current->next;
-        printf("free\n");
+		printf("free\n");
 		free(current->key);
-        free(current->value);
+		free(current->value);
 		free(current);
 		current = next;
 	}
