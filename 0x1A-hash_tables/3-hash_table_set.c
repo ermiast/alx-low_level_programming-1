@@ -27,27 +27,27 @@ if (node == NULL)
 		return (0);
 
 	ht->array[index] = new_node;
+	return (1);
 }
-else
+
+/*If key exists, replace value*/
+while (node != NULL)
 {
-	while (1)
+	if (strcmp(key, node->key) == 0)
 	{
-		if (strcmp(key, node->key) == 0)
-		{
-			node->value = strdup(value);
-			return (1);
-		}
-		if (node->next == NULL)
-			break;
-
-		node = node->next;
+		free(node->value);
+		node->value = strdup(value);
+		return (1);
 	}
-	new_node = create_new_node(key, value);
-	if (new_node == NULL)
-		return (0);
-
-	node->next = new_node;
+	node = node->next;
 }
+/*If key doesn't exist, create new node*/
+new_node = create_new_node(key, value);
+if (new_node == NULL)
+	return (0);
+
+new_node->next = ht->array[index];
+ht->array[index] = new_node;
 return (1);
 }
 

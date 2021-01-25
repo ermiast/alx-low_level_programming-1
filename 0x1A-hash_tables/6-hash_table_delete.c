@@ -16,6 +16,7 @@ for (i = 0; i < ht->size; i++)
 	node = ht->array[i];
 	free_hash_list(node);
 }
+free(ht->array);
 free(ht);
 }
 
