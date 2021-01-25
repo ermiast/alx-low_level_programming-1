@@ -28,7 +28,6 @@ for (i = 0; i < ht->size; i++)
 		if (comma == 0)
 			comma = 1;
 	}
-
 }
 printf("}\n");
 }
